@@ -40,15 +40,16 @@ This comes with a sqlite database pre-loaded, however if you would like to build
 ## Test
 
 Note that tests are not yet complete, there's only 1 e2e and a few unit tests that don't get full coverage
+Note also that currently you have to kill the dev server to run the tests, which is not great, but didn't have time to fix those configs up correctly
 
 ```bash
 # run unit tests
 npm run unit
 
-# run e2e tests
+# run e2e tests (be sure to `npm run build` beforehand in order to get the service-worker.js file created e2e)
 npm run e2e
 
-# run all tests
+# run all tests (be sure to `npm run build` beforehand in order to get the service-worker.js file created for e2e)
 npm test
 ```
 
