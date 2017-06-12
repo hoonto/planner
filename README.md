@@ -39,8 +39,8 @@ This comes with a sqlite database pre-loaded, however if you would like to build
 
 ## Test
 
-Note that tests are not yet complete, there's only 1 e2e and a few unit tests that don't get full coverage
-Note also that currently you have to kill the dev server to run the tests, which is not great, but didn't have time to fix those configs up correctly
+* Note that tests are not yet complete, there's only 1 e2e and a few unit tests that don't get full coverage
+* Note also that currently you have to kill the dev server to run the tests, which is not great, but didn't have time to fix those configs up correctly
 
 ```bash
 # run unit tests
@@ -73,6 +73,8 @@ __this is a bit manual at the moment...__
 3. Restart both servers (`node server/server` and `npm run dev`)
 
 ## To change the configuration of most things
+
+* Note: The configs are not tested, they may or may not work and there are some obvious problems, for example the port for testing is the same as the port in dev so clearly something is incorrect in how I'm doing that.
 
 1. from the root of the project directory `cd config`
 2. You will find a number of config files here:
