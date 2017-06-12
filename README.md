@@ -12,14 +12,13 @@
 * jsonapi-server (for building json api compliant endpoints)
 * express (considered koa and hapi, but express is easy and vue dev server uses it anyway)
 * swagger-ui-express (serves the swagger API UI, though it does have to be done manually right now)
-* vue-datepicker
+* vue-datepicker (needed something quick in a pinch)
 
 ## Funky things you might notice
 
-1. I'm generally a tabs/semicolon guy, but I went with the default for vue in this case, which is a 2-space/no semicolon
+1. Eslint and style: I'm generally a tabs/semicolon guy, but I went with the default for vue.js created for me in this case, (2-space/no semicolon eslint)
 2. You do have to fire up the server to serve up the API separately from the server to do the dev work at the present time
 3. Uses material design, just or ease of putting together
-4. ES6 is not used on some of the server-side files for the api server, that could use improvement.
 
 ## Development
 
@@ -37,6 +36,8 @@ npm run dev
 ```
 
 ## Test
+
+Note that tests are not yet complete, there's only 1 e2e and a few unit tests that don't get full coverage
 
 ```bash
 # run unit tests

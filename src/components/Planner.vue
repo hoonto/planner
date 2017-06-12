@@ -18,7 +18,7 @@
       <ul>
         <li v-for="plan in plans" v-bind:class="{ 'current-year': plan.currentYear, 'next-year': plan.nextYear }">
           <md-layout md-align="left" md-flex="70">
-            <span>
+            <span class="title">
               {{plan.attributes.title}}
             </span>
           </md-layout>
@@ -46,8 +46,10 @@ import plans from '../services/PlansService'
 
 export default {
   name: 'planner',
-  data () {
+  created () {
     this.getPlans()
+  },
+  data () {
     return {
       msg: 'Welcome to Your Vue.js PWA',
       plans: [],
@@ -89,15 +91,15 @@ export default {
         const locale = window.navigator.userLanguage || window.navigator.language
 
         this.plans = plans.data.filter(plan => moment(plan.attributes.duedate).isSameOrAfter(today))
-          .sort((plan1, plan2) => moment.utc(plan1.attributes.duedate).diff(moment.utc(plan2.attributes.duedate)))
-          .map(plan => {
-            moment.locale(locale)
+        .sort((plan1, plan2) => moment.utc(plan1.attributes.duedate).diff(moment.utc(plan2.attributes.duedate)))
+        .map(plan => {
+          moment.locale(locale)
 
-            plan.currentYear = moment(plan.attributes.duedate).format('YYYY') === today.format('YYYY')
-            plan.nextYear = moment(plan.attributes.duedate).isBetween(moment().endOf('year'), moment().add(1, 'years'))
-            plan.displayDate = moment(plan.attributes.duedate).format('L')
-            return plan
-          })
+          plan.currentYear = moment(plan.attributes.duedate).format('YYYY') === today.format('YYYY')
+          plan.nextYear = moment(plan.attributes.duedate).isBetween(moment().endOf('year'), moment().add(1, 'years'))
+          plan.displayDate = moment(plan.attributes.duedate).format('L')
+          return plan
+        })
       })
     },
     addPlan () {
