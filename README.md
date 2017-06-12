@@ -18,7 +18,7 @@
 
 1. Eslint and style: I'm generally a tabs/semicolon guy, but I went with the default for vue.js created for me in this case, (2-space/no semicolon eslint)
 2. You do have to fire up the server to serve up the API separately from the server to do the dev work at the present time
-3. Uses material design, just or ease of putting together
+3. Testing and development do not run side-by-side, you have to kill the dev server to run tests which is not great (due to hitting the same port - config problem I wasn't able to fix yet).
 
 ## Development
 
