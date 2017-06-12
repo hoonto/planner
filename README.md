@@ -35,6 +35,8 @@ npm run dev
 # browse the swagger API at http://localhost:9001/api-docs
 ```
 
+This comes with a sqlite database pre-loaded, however if you would like to build a new one, `rm planner.sqlite` and run `npm run syncdb` to create a new one
+
 ## Test
 
 Note that tests are not yet complete, there's only 1 e2e and a few unit tests that don't get full coverage
