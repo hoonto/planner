@@ -2,18 +2,18 @@
 
 > A maintenance planner
 
-## Notable modules
+## Notable modules and design considerations
 
-* vue (because I haven't used it previously, nice experience, I like it!)
-* sequelize (loopback is another option which uses juggler, I'm indifferent though)
-* sqlite3
-* vue-material (easy to prototype nice interfaces - though I'm not an expert yet in it)
-* axios (because axios is nice and the vue folks said they prefer it now over their vue-resource)
-* jsonapi-server (for building json api compliant endpoints)
-* express (considered koa and hapi, but express is easy and vue dev server uses it anyway)
-* swagger-ui-express (serves the swagger API UI, though it does have to be done manually right now)
-* vue-datepicker (needed something quick in a pinch)
-* jsonapi-store-relationaldb (comes from a fork of mine with a fix applied for sqlite storage, works with jsonapi-server)
+* vue: because I haven't used it previously, nice experience, I like it!
+* sequelize: There are many options, loopback for example which uses juggler, but sequelize has been around for a long time and many people know it
+* sqlite3: To connect to the sqlite database - there is also `better-sqlite3` which is supposedly faster, but I didn't want to mess around with it for MVP
+* vue-material: Easy to prototype nice interfaces - though I'm not an expert yet in it
+* axios: Because axios is nice and the vue folks said they prefer it now over their vue-resource
+* jsonapi-server: For building json api compliant endpoints
+* express: I briefly considered koa and hapi, but express is easy and vue dev server uses it anyway
+* swagger-ui-express: Serves the swagger API UI, though it does have to be done manually right now
+* vue-datepicker: Needed something quick in a pinch for MVP
+* jsonapi-store-relationaldb: Comes from a fork of mine with a fix applied for sqlite storage, works with jsonapi-server
 
 ## Funky things you might notice
 
