@@ -13,6 +13,7 @@
 * express (considered koa and hapi, but express is easy and vue dev server uses it anyway)
 * swagger-ui-express (serves the swagger API UI, though it does have to be done manually right now)
 * vue-datepicker (needed something quick in a pinch)
+* jsonapi-store-relationaldb (comes from a fork of mine with a fix applied for sqlite storage, works with jsonapi-server)
 
 ## Funky things you might notice
 
