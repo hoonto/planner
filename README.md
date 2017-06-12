@@ -67,7 +67,7 @@ npm run build --report
 
 __this is a bit manual at the moment...__
 
-1. Go to the swagger API location (by default http://localhost:9001/rest/swagger.json) in your browser
+1. Go to the swagger API location (by default http://localhost:9000/rest/swagger.json) in your browser
 2. Copy the content and paste it into server/swagger/plans.json
 3. Restart both servers (`node server/server` and `npm run dev`)
 
